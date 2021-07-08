@@ -18,17 +18,14 @@ This library is a useful tool for Spigot Minecraft Plugin Developers. Included a
 
 * A very cool way to register listener classes
 * No plugin.yml required commands
-* String Utility class
-* **More Soon!**
-
-### Planned Features
- * Dependency Downloader
- * Dependency Loader
- * Spigot update checker
  * Two events
     * PlayerJumpEvent
     * PlayerRelocateEvent (a cancellable version of PlayerMoveEvent)
- * StringUtils
+* StringUtils class
+* **More Soon!**
+
+### Planned Features
+* To be determined...
  
  
 ## Download
