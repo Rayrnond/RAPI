@@ -1,3 +1,0 @@
-name: RAPI
-version: ${project.version}
-main: com.reflexian.example.ExampleMain

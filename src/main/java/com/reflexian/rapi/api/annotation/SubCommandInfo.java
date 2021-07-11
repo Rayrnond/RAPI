@@ -9,9 +9,10 @@ import java.lang.annotation.Target;
 
 @Target(ElementType.TYPE)
 @Retention(RetentionPolicy.RUNTIME)
-public @interface CommandInfo {
+public @interface SubCommandInfo {
 
-    @NotNull String name();
+    @NotNull String arg();
+    @NotNull Class<?> command();
     String description() default "";
     String[] aliases() default {};
 
