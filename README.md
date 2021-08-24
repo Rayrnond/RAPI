@@ -48,29 +48,6 @@ This library is a useful tool for Spigot Minecraft Plugin Developers. Included a
 	    <version>1.0</version>
 	  </dependency>
     </dependencies>  
-```
- 
- ### Gradle
- 
- Add this in your root build.gradle at the end of repositories.
- 
- ```xml
-
-	allprojects {
-		repositories {
-			...
-			maven { url 'https://jitpack.io' }
-		}
-	}
-  ```
-  
-  Add the dependency.
-  
-  ```xml
-  
-  	dependencies {
-	        implementation 'com.github.Rayrnond:RAPI:VERSION'
-	}
   ```
   
   ## Examples
