@@ -30,9 +30,6 @@ This library is a useful tool for Spigot Minecraft Plugin Developers. Included a
  
 ## Download
 
-Replace ``VERSION`` with the version below
-[![](https://jitpack.io/v/Rayrnond/RAPI.svg)](https://jitpack.io/#Rayrnond/RAPI)
-
 ### Maven
  
  ```xml
