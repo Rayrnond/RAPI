@@ -39,16 +39,16 @@ Replace ``VERSION`` with the version below
 
     <repositories>
 	  <repository>
-	    <id>jitpack.io</id>
-	    <url>https://jitpack.io</url>
+	    <id>reflexian-repo</id>
+	    <url>https://repository.reflexian.com</url>
 	  </repository>
     </repositories>
 
     <dependencies>  
 	  <dependency>
-	    <groupId>com.github.Rayrnond</groupId>
-	    <artifactId>RAPI</artifactId>
-	    <version>VERSION</version>
+	    <groupId>com.reflexian</groupId>
+	    <artifactId>rapi</artifactId>
+	    <version>1.0</version>
 	  </dependency>
     </dependencies>  
 ```
