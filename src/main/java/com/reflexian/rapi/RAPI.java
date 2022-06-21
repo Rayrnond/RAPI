@@ -54,8 +54,6 @@ public final class RAPI {
                         bukkitCommandMap.setAccessible(true);
                         CommandMap commandMap = (CommandMap) bukkitCommandMap.get(Bukkit.getServer());
                         commandMap.register(instance.getName().toLowerCase(), command);
-                        instance.getCommand(commandInfo.name()).setTabCompleter(command);
-
                     } catch(Exception e) {
                         e.printStackTrace();
                     }

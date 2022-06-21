@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public abstract class Command extends org.bukkit.command.Command implements TabCompleter {
+public abstract class Command extends org.bukkit.command.Command {
 
     final List<SubCommand> subCommands = new ArrayList<>();
 
@@ -31,8 +31,6 @@ public abstract class Command extends org.bukkit.command.Command implements TabC
 
     public abstract boolean execute(CommandSender sender, String[] args);
 
-    public abstract List<String> tabCompletion(CommandSender sender, String[] args);
-
     @Override
     public boolean execute(CommandSender sender, String commandLabel, String[] args) {
         if (args.length > 0) {
@@ -47,8 +45,4 @@ public abstract class Command extends org.bukkit.command.Command implements TabC
         return execute(sender, args);
     }
 
-    @Override
-    public List<String> onTabComplete(CommandSender commandSender, org.bukkit.command.Command command, String s, String[] strings) {
-        return tabCompletion(commandSender, strings);
-    }
 }
