@@ -30,50 +30,24 @@ This library is a useful tool for Spigot Minecraft Plugin Developers. Included a
  
 ## Download
 
-Replace ``VERSION`` with the version below
-[![](https://jitpack.io/v/Rayrnond/RAPI.svg)](https://jitpack.io/#Rayrnond/RAPI)
-
 ### Maven
  
  ```xml
 
     <repositories>
 	  <repository>
-	    <id>jitpack.io</id>
-	    <url>https://jitpack.io</url>
+	    <id>reflexian-repo</id>
+	    <url>https://repository.reflexian.com</url>
 	  </repository>
     </repositories>
 
     <dependencies>  
 	  <dependency>
-	    <groupId>com.github.Rayrnond</groupId>
-	    <artifactId>RAPI</artifactId>
-	    <version>VERSION</version>
+	    <groupId>com.reflexian</groupId>
+	    <artifactId>rapi</artifactId>
+	    <version>1.0</version>
 	  </dependency>
     </dependencies>  
-```
- 
- ### Gradle
- 
- Add this in your root build.gradle at the end of repositories.
- 
- ```xml
-
-	allprojects {
-		repositories {
-			...
-			maven { url 'https://jitpack.io' }
-		}
-	}
-  ```
-  
-  Add the dependency.
-  
-  ```xml
-  
-  	dependencies {
-	        implementation 'com.github.Rayrnond:RAPI:VERSION'
-	}
   ```
   
   ## Examples
