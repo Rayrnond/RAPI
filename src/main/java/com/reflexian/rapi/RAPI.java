@@ -7,15 +7,12 @@ import com.reflexian.rapi.api.command.Command;
 import com.reflexian.rapi.api.command.SubCommand;
 import io.github.classgraph.ClassGraph;
 import io.github.classgraph.ScanResult;
-import lombok.SneakyThrows;
 import org.bukkit.Bukkit;
 import org.bukkit.command.CommandMap;
 import org.bukkit.event.Listener;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.lang.reflect.Field;
-import java.lang.reflect.InvocationTargetException;
-import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -37,6 +34,7 @@ public final class RAPI {
     private final List<Command> commands = new ArrayList<>();
     private void loadCommands() {
 
+
         try {
             String[] pack = instance.getClass().getPackage().getName().split("\\.");
             try (ScanResult scanResult = new ClassGraph().enableAllInfo().acceptPackages(pack[0] + "." + pack[1]).enableClassInfo().scan()) {
@@ -56,6 +54,8 @@ public final class RAPI {
                         bukkitCommandMap.setAccessible(true);
                         CommandMap commandMap = (CommandMap) bukkitCommandMap.get(Bukkit.getServer());
                         commandMap.register(instance.getName().toLowerCase(), command);
+                        instance.getCommand(commandInfo.name()).setTabCompleter(command);
+
                     } catch(Exception e) {
                         e.printStackTrace();
                     }

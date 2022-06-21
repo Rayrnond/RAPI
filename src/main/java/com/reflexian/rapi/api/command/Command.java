@@ -38,7 +38,7 @@ public abstract class Command extends org.bukkit.command.Command implements TabC
         if (args.length > 0) {
             for (SubCommand subCommand : subCommands) {
                 SubCommandInfo info = subCommand.getClass().getDeclaredAnnotation(SubCommandInfo.class);
-                if (info.arg().equalsIgnoreCase(args[0]) || Arrays.asList(info.aliases()).contains(args[0].toLowerCase())) {
+                if (info.name().equalsIgnoreCase(args[0]) || Arrays.asList(info.aliases()).contains(args[0].toLowerCase())) {
                     subCommand.execute(sender, args);
                     return true;
                 }
